@@ -1,0 +1,38 @@
+{
+  "name": "zorg",
+  "description": "Scripts for playing with my Sphero 2.0 called Zorg",
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/neocotic/zorg/issues"
+  },
+  "author": {
+    "url": "http://neocotic.com",
+    "name": "Alasdair Mercer",
+    "email": "mercer.alasdair@gmail.com"
+  },
+  "licenses": [
+    {
+      "url": "https://raw.github.com/neocotic/zorg/master/LICENSE.md",
+      "type": "MIT"
+    }
+  ],
+  "private": true,
+  "keywords": [
+    "zorg",
+    "robot",
+    "cylon",
+    "sphero"
+  ],
+  "repository": {
+    "url": "git://github.com/neocotic/zorg.git",
+    "type": "git"
+  },
+  "dependencies": {
+    "coffee-script": "~1.7.1",
+    "cylon": "~0.14.0",
+    "cylon-joystick": "~0.5.0",
+    "cylon-keyboard": "~0.5.0",
+    "cylon-sphero": "~0.10.0"
+  },
+  "main": "./src/index"
+}
