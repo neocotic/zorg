@@ -1,7 +1,8 @@
 Cylon = require('cylon')
 utils = require('../utils')
+zorg = require('../zorg')
 
-GamePad = Cylon.robot({
+gamePad = Cylon.robot({
   connection: {
     name: 'joystick'
     adaptor: 'joystick'
@@ -53,4 +54,4 @@ GamePad = Cylon.robot({
     console.log("Released button: #{button}")
 })
 
-module.exports = GamePad
+module.exports = gamePad

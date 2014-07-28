@@ -1,10 +1,9 @@
 require('coffee-script/register')
 
 Cylon = require('cylon')
-Zorg = require('./zorg')
-#GamePad = require('./controller/gamepad')
-Keyboard = require('./controller/keyboard')
+zorg = require('./zorg')
+controller = require('./controller')
 
 Cylon.start()
 
-module.exports = Zorg
+module.exports = zorg

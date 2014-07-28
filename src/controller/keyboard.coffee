@@ -1,11 +1,8 @@
 Cylon = require('cylon')
-Zorg = require('../zorg')
 utils = require('../utils')
+zorg = require('../zorg')
 
-move = (heading) ->
-  -> Zorg.move(heading)
-
-Keyboard = Cylon.robot({
+keyboard = Cylon.robot({
   connection: {
     name: 'keyboard'
     adaptor: 'keyboard'
@@ -17,18 +14,32 @@ Keyboard = Cylon.robot({
   }
 
   events: {
-    'a up': move(0)
-    'd right': move(90)
-    's down': move(180)
-    'a left': move(270)
+    'up': 'speedUp'
+    'right': 'turnRight'
+    'down': 'slowDown'
+    'left': 'turnLeft'
     'space': 'stop'
   }
+
+  rotation: 10
 
   work: ->
     utils.delegateEvents(@, 'keyboard')
 
+  slowDown: ->
+    zorg.decrementThrottle()
+
+  speedUp: ->
+    zorg.incrementThrottle()
+
   stop: ->
-    Zorg.stop()
+    zorg.stop()
+
+  turnLeft: ->
+    zorg.rotate(-@rotation)
+
+  turnRight: ->
+    zorg.rotate(@rotation)
 })
 
-module.exports = Keyboard
+module.exports = keyboard
