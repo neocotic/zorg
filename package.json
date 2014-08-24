@@ -29,13 +29,13 @@
   },
   "dependencies": {
     "coffee-script": "~1.7.1",
-    "cylon": "~0.16.0",
+    "cylon": "~0.18.0",
     "cylon-joystick": "~0.6.1",
-    "cylon-keyboard": "~0.7.0",
-    "cylon-sphero": "~0.13.0"
+    "cylon-keyboard": "~0.8.0",
+    "cylon-sphero": "~0.14.0"
   },
   "main": "./src/index",
   "scripts": {
-    "start": "./node_modules/.bin/coffee ./src"
+    "start": "coffee ./src"
   }
 }
